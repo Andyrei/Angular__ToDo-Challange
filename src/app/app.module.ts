@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { AppComponent } from 'src/app/app.component';
 import { TodosModule } from 'src/app/todos/todos.module';
+import { MainComponent } from './todos/components/main/main.component';
 
 @NgModule({
   declarations: [
