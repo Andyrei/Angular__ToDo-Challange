@@ -1,17 +1,27 @@
 
-<img src="../../../assets/1.png" width="500" height="500" alt="image of myself" class=" w-35 rounded-full">
+  <section class="grid grid-cols-5 grid-rows-2 items-center">
+    <div class="col-span-2 row-span-2 p-4 ">
+        <h3 class="text-[3rem] font-mono">Ciao, il mio nome &egrave; <span class="p-2 text-[3rem] underline font-bold text-violet-500 bg-gradient-to-tr">Andy!</span></h3>
+        <ngx-typed-js
+        [strings]="['determined ', 'curious', 'motivated', 'ready to learn', 'funny']"
+        [backDelay]="1000"
+        [loop]="true"
+        [fadeOut]="true"
+        [typeSpeed]="80"
+        >
+        <h1 class="text-[5vh] my-3">I am <span class="typing text-red-500 underline font-bold"></span><span class="animate-pulse">!!!!</span></h1>
+      </ngx-typed-js>
+    </div>
+    <div class="col-span-3 row-span-2 ">
+        <img src="../../../assets/1.png" width="1000" height="1000" alt="image of myself">
+    </div>
+  </section>
+
+<section class="">
+  <p>Sono riuscito a finire 😄 il challenge in tempo, spero io. Ammetto, Angular non è mai stata la mia prima scelta come framework, preferivo sempre React anche se è definito una libreria 😅. </p>
+  <p>Devo dire, però, questi giorni Angular mi ha messo davvero alla prova 😅 l’unico problema che sono testardo e mi piacciono i challenge.</p>
+</section>
 
 
-<ngx-typed-js
-  [strings]="['awesome', 'curious', 'motivated', 'ready to learn']"
-  [backDelay]="1000"
-  [loop]="true">
-  <h1>I am <span class="typing"></span></h1>
-</ngx-typed-js>
 
-
-
-
-
-
-<a href="/todo-challenge">click</a>
+<a href="/todo-challenge" class="btn btn-success my-5">To Do Challenge!!! >>> </a>
