@@ -1,0 +1,50 @@
+<footer class="grid justify-between items-center grid-cols-5 p-3" [ngClass]="{hidden: anyTodos$ | async}">
+  <p class="text-sm"><span class="font-mono mr-2 animate-pulse ">{{ activeTodos$ | async}}</span> <span class="text-[.8em]">{{itemsText$ | async}}</span></p>
+  <ul class="col-span-3 flex justify-center gap-2">
+    <li>
+      <button
+          type="button"
+          class="btn"
+          [ngClass]="{'btn-info': (filter$ | async) === filterEnum.all}"
+          (click)="changeFilter($event, filterEnum.all)"
+          >
+        all
+        <div class="badge">{{ allTodos$ | async}}</div>
+      </button>
+    </li>
+    <li>
+      <button
+          type="button"
+          class="btn"
+          [ngClass]="{'btn-info': (filter$ | async) === filterEnum.active}"
+          (click)="changeFilter($event, filterEnum.active)">
+        active
+        <div class="badge">{{ activeTodos$ | async}}</div>
+      </button>
+    </li>
+    <li>
+      <button
+          type="button"
+          class="btn"
+          [ngClass]="{'btn-info': (filter$ | async) === filterEnum.completed}"
+          (click)="changeFilter($event, filterEnum.completed)"
+          >
+        completed
+        <div class="badge">{{ inactiveTodos$ | async}}</div>
+      </button>
+    </li>
+  </ul>
+
+  <button [ngClass]="{'hidden': (filter$ | async) !== filterEnum.completed || (inactiveTodos$ | async)! == 0 }" class="btn btn-error btn-outline" onclick="clearCompleted.showModal()">Clear Completed</button>
+  <dialog id="clearCompleted" class="modal">
+    <form method="dialog" class="modal-box">
+      <h3 class="font-bold text-lg text-red-400">Warning!!!!</h3>
+      <p class="py-4">Do you really want to delete all completed todos?</p>
+      <div class="modal-action">
+        <button type="button" class="btn btn-error btn-outline" (click)="clearDoneTodos()" onclick="clearCompleted.close()">Delete</button>
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn btn-info">Discard</button>
+      </div>
+    </form>
+  </dialog>
+</footer>

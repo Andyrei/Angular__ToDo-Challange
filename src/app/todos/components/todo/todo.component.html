@@ -1,0 +1,58 @@
+<li
+    (dblclick)="setEditMode()"
+    [ngClass]="{editing: isEditingProps}"
+    class="group/item p-4 hover:bg-gray-600 cursor-pointer"
+    (mouseleave)="isOpen = false"
+    >
+  <div
+    class="w-full relative flex justify-around items-center"
+    [ngClass]="{'hidden': isEditingProps}"
+  >
+    <input
+      type="checkbox"
+      class="peer mx-5 cursor-pointer checkbox checked:checkbox-success"
+      id="{{todoProps.id}}_isCompleted"
+      [checked]="todoProps.isDone"
+      (change)="toggleTodo()"
+      >
+      <label
+          (click)="openToolTip()"
+          class="flex-1 h-full my-auto peer-checked:line-through peer-checked:text-success peer-checked:opacity-60 cursor-pointer">
+        {{ todoProps.value }}
+      </label>
+      <span *ngIf="isOpen" class="block absolute w-full p-6 text-center bg-gray-600 pointer-events-none">Double click me to edit</span>
+      <button
+        type="button"
+        class="group/edit invisible group-hover/item:visible mx-5 btn btn-circle btn-ghost"
+        (click)="removeTodo()"
+        >
+        <fa-icon [icon]="faTrashCan" class="text-error"></fa-icon>
+      </button>
+  </div>
+
+
+  <ng-container
+    *ngIf="isEditingProps">
+      <div class="flex justify-around items-center">
+        <input
+          #editingInput
+          (blur)="toDoOutOfFocus()"
+          (keyup)="changeText($event)"
+          (keyup.enter)="changeTodo()"
+          (change)="changeTodo()"
+          class="
+          w-4/5
+          block
+          p-2
+          bg-slate-900
+          bg-opacity-60
+          border
+          border-red-600
+          outline-none
+          focus:border-b-2" value="{{ editingText }}"
+        >
+        <fa-icon [icon]="faEdit" class="text-lg"></fa-icon>
+      </div>
+
+    </ng-container>
+  </li>

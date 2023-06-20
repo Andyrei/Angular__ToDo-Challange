@@ -1,0 +1,31 @@
+<header class="w-3/5 mx-auto relative flex justify-center my-3 tooltip-bottom tooltip hover:tooltip-open" data-tip="Press 'Enter' to add todos">
+    <input
+        class="
+          bg-slate-900
+          bg-opacity-60
+          block
+          w-full
+          p-4
+          border
+        border-red-600
+          outline-none
+          border-t-0
+          border-l-0
+          border-r-0
+          focus:border-b-2"
+        placeholder="What task do we have to do?"
+        autoFocus
+        [value]="text"
+        (keyup)="changeText($event)"
+        (keyup.enter)="addTodo()"
+        (focus)="onFocusSmiley()"
+        (blur)="onBlurSmiley()"
+        />
+      <span class="absolute text-3xl right-2 top-1/2 -translate-y-1/2">
+        <fa-stack>
+          <fa-icon *ngIf="(smiley$ | async) == smileyEnum.default" [icon]="faSmileBeam" stackItemSize="1x"></fa-icon>
+          <fa-icon *ngIf="(smiley$ | async) == smileyEnum.onFocus" [icon]="faLaughBeam" stackItemSize="1x"></fa-icon>
+          <fa-icon *ngIf="(smiley$ | async) == smileyEnum.writing" [icon]="faGrinHearts" stackItemSize="1x"></fa-icon>
+        </fa-stack>
+      </span>
+</header>
