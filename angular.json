@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "challenge2.0:build:production"
+              "browserTarget": "challengeToDo:build:production"
             },
             "development": {
-              "browserTarget": "challenge2.0:build:development"
+              "browserTarget": "challengeToDo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "challenge2.0:build"
+            "browserTarget": "challengeToDO:build"
           }
         },
         "test": {
