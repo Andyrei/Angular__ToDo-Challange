@@ -1,22 +1,22 @@
 <!-- Toolbar -->
-<div class="toolbar px-40" role="banner">
+<div class="toolbar p-2 md:px-40" role="banner">
     <img
       width="40"
       alt="Angular Logo"
       src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
     />
-    <span>Challenge To Do App</span>
+    <span class="invisible md:visible">Challenge To Do App</span>
 
   <div class="ml-auto">
-    <a *ngIf="router.url === '/'" href="/todo-challenge" class="btn btn-warning font-mono font-extrabold text-lg">To do Challenge</a>
-    <a *ngIf="router.url === '/todo-challenge'" href="/" class="btn btn-warning font-mono font-extrabold text-lg">Intro</a>
+    <a *ngIf="router.url === '/'" href="/todo-challenge" class="btn btn-warning font-mono font-extrabold text-md md:text-lg">To do Challenge</a>
+    <a *ngIf="router.url === '/todo-challenge'" href="/" class="btn btn-warning font-mono font-extrabold text-md md:text-lg">Intro</a>
   </div>
 </div>
 
 <div class="content" role="main">
 
   <!-- Highlight Card -->
-<div class="card highlight-card card-small mb-10">
+<div *ngIf="router.url === '/todo-challenge'" class="card highlight-card card-small mb-10">
 
   <svg id="rocket" xmlns="http://www.w3.org/2000/svg" width="101.678" height="101.678" viewBox="0 0 101.678 101.678">
     <title>Rocket Ship</title>
@@ -37,7 +37,7 @@
   </svg>
 </div>
 
-<div class="w-full min-h-[70vh] grid">
+<div class="w-full md:min-h-[70vh] grid">
   <router-outlet></router-outlet>
 </div>
 

@@ -1,7 +1,7 @@
 <li
     (dblclick)="setEditMode()"
     [ngClass]="{editing: isEditingProps}"
-    class="group/item p-4 hover:bg-gray-600 cursor-pointer"
+    class="group/item bg-gray-700 bg-opacity-60 md:bg-transparent md:bg-opacity-100 py-4 md:p-4 hover:bg-gray-600 cursor-pointer"
     (mouseleave)="isOpen = false"
     >
   <div
@@ -23,7 +23,7 @@
       <span *ngIf="isOpen" class="block absolute w-full p-6 text-center bg-gray-600 pointer-events-none">Double click me to edit</span>
       <button
         type="button"
-        class="group/edit invisible group-hover/item:visible mx-5 btn btn-circle btn-ghost"
+        class="group/edit visible md:invisible group-hover/item:visible mx-5 btn btn-circle btn-ghost"
         (click)="removeTodo()"
         >
         <fa-icon [icon]="faTrashCan" class="text-error"></fa-icon>

@@ -1,7 +1,7 @@
 <section
     class="bg-gray-700 bg-opacity-30 p-4"
     [ngClass]="{hidden: anyTodos$ | async}">
-    <label for="toggle-all" class="flex items-center gap-4">
+    <label for="toggle-all" class="flex items-center justify-around md:justify-start gap-4">
       <input
             type="checkbox"
             id="toggle-all"
@@ -10,7 +10,7 @@
             (change)="selectAllTodos($event)"/>
       <span class="peer-checked:text-success">Select all as done!</span>
     </label>
-  <ul>
+  <ul class="my-5">
     <app-todo
       *ngFor="let todo of visibleTodos$ | async"
       [todo] = "todo"

@@ -1,7 +1,7 @@
 
-  <section class="grid grid-cols-5 grid-rows-2 items-center">
-    <div class="col-span-2 row-span-2 p-4 ">
-        <h3 class="text-[3rem] font-mono">Hi, my name is<span class="p-2 text-[3rem] underline font-bold text-violet-500 bg-gradient-to-tr">Andy!</span></h3>
+  <section class="grid grid-cols-1 md:grid-cols-5 grid-rows-2 items-center">
+    <div class="text-center col-span-2 row-span-2 p-4 ">
+        <h3 class="text-3xl md:text-[3rem] font-mono">Hi, my name is<span class="p-2 text-[3rem] underline font-bold text-violet-500 bg-gradient-to-tr">Andy!</span></h3>
         <ngx-typed-js
         [strings]="['determined ', 'curious', 'motivated', 'ready to learn', 'funny']"
         [backDelay]="1000"
@@ -9,7 +9,7 @@
         [fadeOut]="true"
         [typeSpeed]="80"
         >
-        <h1 class="text-[5vh] my-3">I am <span class="typing text-red-500 underline font-bold"></span><span class="animate-pulse">!!!!</span></h1>
+        <h1 class="text-2xl md:text-[5vh] my-3">I am <span class="typing text-red-500 underline font-bold"></span><span class="animate-pulse">!!!!</span></h1>
       </ngx-typed-js>
     </div>
     <div class="col-span-3 row-span-2 ">
@@ -17,12 +17,14 @@
     </div>
   </section>
 
-    <p>
+    <div class="text-center md:text-left my-5">
+      <p>
         I finally finished the challenge on time, I hope 😄. I admit Angular never was my first choice as a web framework; I liked React more, even if it is considered a library. 😅
-        </p>
-    <p>
+      </p>
+      <p class="mt-5">
         Well, to say it all, these challenging days went great 😄 and were hard enough to learn a new framework in just five days.
         But one of my biggest problems is my stubbornness, so I rolled up my sleeves and started to read articles and documentation on angular 😂.
-    </p>
+      </p>
+      <a href="/todo-challenge" class="btn btn-warning font-mono font-extrabold text-blue-600 my-5 mx-auto">Go to Challenge!!!</a>
+    </div>
 
-<a href="/todo-challenge" class="btn btn-success my-5">To Do Challenge!!! >>> </a>
