@@ -1,5 +1,5 @@
-# GoInfoteam JR FE Developer Challenge
-You can see it live on Netlify [Go TO SEE IT DEPLOYED!](https://goinfoteam-challenge.netlify.app)
+# ToDo App
+You can see it live on Netlify [Go TO SEE IT DEPLOYED!](https://nd-todoapp-angular.netlify.app/)
 
 ## Obiettivo:
 Il tuo obiettivo è creare una semplice applicazione Angular per la gestione di una lista di attività (todo list).
@@ -35,13 +35,13 @@ Lo scopo di questo test è capire come ragioni, come approcci e risolvi problemi
 
 
 # ⏭️ NEXT TO BE DONE!
-- [] Add a small tutorial in the beggining... (Hint: LocalStorage, user, one time only)
-- [X] Add Pop Up on Clear Completed
-- [X] Add counter inside each button correlated to each filter
+- [] Add a small tutorial in the beginning... (Hint: LocalStorage, user, one time only)
+- [X] Add Pop-Up on Clear Completed
+- [X] Add a counter inside each button correlated to each filter
 
 # 🪲 BUGS!!!
-- [] if Select all and unselect only one it stays checked....
-- [x] SOLVED: if clear al completed input becomes unuseable had to close modal after delete
+- [] If Select all and unselect only one it stays checked...
+- [x] SOLVED: if clear all completed input becomes unusable had to close modal after delete
 
 
 ## Colors 
